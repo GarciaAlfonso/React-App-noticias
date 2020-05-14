@@ -45,12 +45,17 @@ const Noticia = ({noticia}) => {
                         <img className="activator" src={urlToImage} alt="Noticia sin imagen"/>
                     </div>
                     <div className="card-content">
-                        <span className="card-title activator black-text">{title}</span>
+                        <span className="card-title activator black-text">{title.substring(0,75)}</span>
                         <p><a 
                             href={url}
                             target="_blank"
                             rel="noopener noreferrer"
-                            >{`Ir a ${source.name}`}</a></p>
+                            >{`Ir a ${source.name}`}
+                            </a>
+                            <i className="material-icons activator right">more_vert</i>
+                        </p>
+                        
+
                     </div>
                     <div className="card-reveal activator">
                         <span className="card-title grey-text text-darken-4">{title}<i className="material-icons right">close</i></span>
